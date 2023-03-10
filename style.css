@@ -15,11 +15,36 @@
 .apply_now{
     background-color: var(--color-1) !important;
     border-radius: 0px !important;
+    min-width: 120px;
 }
-.fixed-nav{
+/* .fixed-nav{
     position: fixed;
     top: 0px;
+} */
+
+.active{
+    color: var(--color-1) !important;
 }
+.navbar-toggler-icon{
+    background-image: url('./Images/menu-4-24.png');
+    
+}
+.navbar-toggler{
+    border: 2px solid white !important;
+    border: none !important;
+    outline: none !important;
+    
+}
+.search{
+    background-image: url('./Images/search-12-16.png');
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    /* background-position-y: 10px; */
+}
+
+/* .navbar-toggler:active{
+    border: 2px solid white !important;
+} */
 nav li{
     list-style: none;
     display: inline-block;
@@ -49,7 +74,7 @@ nav li:first-child{
     background-image: url('./Images/bg.jpg');
     width: 100%;
     background-size: cover;
-    height: 40vw;
+    min-height: 100vh;
     background-color: rgba(255,97,8,0.5);
     background-blend-mode: soft-light;
     box-shadow: 5px 5px 5px gray;
@@ -94,7 +119,7 @@ text-align:justify ;
 }
 .box{
     background-image: url('./Images/mimi-thian-vdXMSiX-n6M-unsplash.jpg');
-    height: 50vw;
+    min-height: 50vw;
     background-size: cover;
     background-color: rgba(255,97,8,0.5);
     background-blend-mode: soft-light;
@@ -105,17 +130,76 @@ text-align:justify ;
 
     
 }
+.grid-container{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.teacher-card-1{
+    background-image: url('./Images/teacher-1.jpg');
+    height: 400px;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: all;
+    transition-duration: 0.5s;
 
+}
+.teacher-card-2{
+    background-image: url('./Images/teacher-2.jpg');
+    height: 400px;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: all;
+    transition-duration: 0.5s;
+
+}
+.teacher-card-3{
+    background-image: url('./Images/teacher-3.jpg');
+    height: 400px;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: all;
+    transition-duration: 0.5s;
+
+}
+.teacher-card-4{
+    background-image: url('./Images/teacher-4.jpg');
+    height: 400px;
+    background-size: 100% 100%;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    transition: all;
+    transition-duration: 0.5s;
+
+}
+.teacher-card-1:hover{
+    transform: scale(105%);
+}
+.teacher-card-2:hover{
+    transform: scale(105%);
+}
+.teacher-card-3:hover{
+    transform: scale(105%);
+}
+.teacher-card-4:hover{
+    transform: scale(105%);
+}
 .card button{
-    width: 80%;
+    width: 60%;
     display: block;
-    margin: 5px auto 10px auto;
-    height: 35px;
+    margin: 10px auto 10px auto;
+    height: 40px;
+    text-transform: uppercase;
     background-color: var(--color-1);
     color: white;
     letter-spacing: 1px;
     border-radius: 20px;
-    padding: 5px;
     font-size: 18px;
 }
 .teacher-container{
@@ -127,8 +211,9 @@ text-align:justify ;
     text-align: center;
     letter-spacing: 2px;
 }
-#teacher-1{
-    transition: transform .2s;
+/* #teacher-1,#teacher-2,#teacher-3,#teacher-4{
+    transition: all;
+    transition-duration: 0.5s;
     
 
 }
@@ -136,29 +221,21 @@ text-align:justify ;
     transform: scale(105%);
 }
 
-#teacher-2{
-    transition: transform .2s;
 
-}
 #teacher-2:hover{
     transform: scale(105%);
 
 }
-#teacher-3{
-    transition: transform.2s;
-}
+
 #teacher-3:hover{
     transform: scale(105%);
 
 }
-#teacher-4{
-    transition: transform.2s;
 
-}
 #teacher-4:hover{
     transform: scale(105%);
 
-}
+} */
 .footer{
     background-color: var(--color-2);
 }
@@ -194,22 +271,71 @@ footer{
 .overlay{
     position: relative;
     bottom: 40px;
-    z-index: 5;
+    /* z-index: 5555555; */
     width: 50%;
     margin: 0px auto 0px auto;
-    display: flex;
     justify-content: space-around;
+    display: none;
+    
 }
 
+@media only screen and (max-width:1024px){
+    .grid-container{
+        grid-template-columns: 50% 50%;
+    }
+}
 @media only screen and (max-width:768px){
     .headerCardsContainer{
         display: flex;
         
       
     }
+
+    .card button{
+        width: 50%;
+    }
+   
+   .grid-container{
+    
+    grid-template-columns: 50% 50%;
+   }
     .headerCard{
         width: 50% !important;
         display: inline-block !important;
        border: 2px solid white;
+    }
+
+    .top-nav > div:first-child{
+        display: none;
+        
+    }
+
+    .hidden-heading{
+        display: block !important;
+        
+    }
+}
+
+@media only screen and (max-width:425px){
+    .grid-container{
+        grid-template-columns: 100%;
+    }
+    .card button{
+        width: 50%;
+    }
+
+    .top-nav{
+        display:flex;
+        flex-direction: column;
+    }
+    .top-nav div{
+        width: 100%;
+    }
+
+    .top-nav h5{
+        display: none;
+    }
+    .top-nav h3{
+        margin-left: 20px;
     }
 }

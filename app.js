@@ -26,6 +26,8 @@ function studentCount(){
     }
 }
 
+
+
 // interval = setInterval(teacherCount,5);
 
 // interval = setInterval(studentCount,5)
