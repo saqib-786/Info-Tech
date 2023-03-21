@@ -101,10 +101,10 @@ nav li:first-child{
     background-color: var(--color-2);
 }
 .aside{
-    background-image: url('./Images/pang-yuhao-_kd5cxwZOK4-unsplash.jpg');
-    background-size: 100% 100%;
+    background-image: url('./Images/Cover.jfif');
+    background-size: 50% 100%;
     background-repeat: no-repeat;
-    
+    background-position: center;
 }
 .para{
  text-justify: newspaper;
@@ -316,6 +316,51 @@ footer{
     }
 }
 
+#quote{
+    background-image: url('./Images/Assistant-2.jpg');
+    height: 100vh;
+    background-size:cover;
+    background-position: 10% 50%;
+    background-color: rgba(255,97,8,0.5);
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
+    transition: all;
+}
+
+.quote{
+    position: absolute;
+    left: 60%;
+    width: 40%;
+    
+}
+td{
+    padding: 10px;
+}
+.contact-form{
+    background: none;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 10px;
+    width: 200px;
+    outline: none;
+    color: white;
+}
+.select{
+    color: white;
+}
+#qoute-btn{
+padding: 15px;
+width: 180px;
+text-transform: capitalize;
+color: white;
+background-color: var(--color-1);
+border: none;
+outline: none;
+border-radius: 25px;
+}
+.contact-form::placeholder{
+    color: white;
+}
 @media only screen and (max-width:425px){
     .grid-container{
         grid-template-columns: 100%;
@@ -338,4 +383,15 @@ footer{
     .top-nav h3{
         margin-left: 20px;
     }
+    .headerCard{
+        width: 100% !important;
+        text-align: center;
+    }
+}
+
+
+
+.animate__fadeInUp{
+    --animate-duration: 1s;
+    opacity: 1 !important;
 }

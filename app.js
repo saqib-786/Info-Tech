@@ -32,3 +32,45 @@ function studentCount(){
 
 // interval = setInterval(studentCount,5)
 
+function handeChange(){
+    let course = document.getElementById('course');
+    let phoneNum = document.getElementById('phoneNum')
+    if(course.value == ''){
+        alert('Please Select Course first');
+        course.style.borderBottom = '1px solid red'
+        return false;
+    }
+}
+
+
+
+let headings = document.querySelectorAll('.animate-heading');
+let animateBox = document.querySelectorAll('.animat-box')
+
+const observer = new IntersectionObserver((enteries)=>{
+    enteries.forEach(heading=>{
+    //    heading.target.classList.toggle('animate__fadeInUp',heading.isIntersecting)
+    if(heading.isIntersecting == true){
+        heading.target.classList.add('animate__fadeInUp')
+    }
+    })
+
+    enteries.forEach(box=>{
+        if(box.isIntersecting == true){
+            box.target.classList.add('animate__fadeInUp')
+        }
+    })
+    
+
+},{
+    threshold: 0.5
+})
+
+
+headings.forEach(item=>{
+    observer.observe(item)
+})
+
+animateBox.forEach(box=>{
+    observer.observe(box)
+})
